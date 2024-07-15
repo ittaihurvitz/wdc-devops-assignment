@@ -17,7 +17,7 @@ class ChuckNorris(Base):
         super().__init__()
 
     def add_arguments(self):
-        self.parser.add_argument("--url", dest="url", help="url to Chuck Norris API URL", default=None)
+        self.parser.add_argument("--url", dest="url", help="url to Chuck Norris API URL", default="https://api.chucknorris.io/jokes/random")
 
     def prepare(self):
         print("debug prepre")
