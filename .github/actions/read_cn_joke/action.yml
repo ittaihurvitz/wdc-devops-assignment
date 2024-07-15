@@ -26,3 +26,5 @@ runs:
             cn_joke=$script_output
             echo "$delimiter"
         } >> "$GITHUB_OUTPUT"
+        echo "GITHUB_OUTPUT is - "
+        echo "$GITHUB_OUTPUT"
