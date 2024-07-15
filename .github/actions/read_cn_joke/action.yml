@@ -20,4 +20,4 @@ runs:
       run: |
         script_output=$(python read_cn_joke.py)
         echo "cn_joke=$script_output"
-        echo "cn_joke=$script_output" >> "$GITHUB_OUTPUT"
+        echo "cn_joke=$script_output<<EOF" >> "$GITHUB_OUTPUT"
