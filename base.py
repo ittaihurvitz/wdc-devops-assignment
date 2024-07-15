@@ -19,6 +19,7 @@ class Base:
         pass
 
     def on_exception(self, e):
+        print(e)
         raise
 
     def on_end(self):
