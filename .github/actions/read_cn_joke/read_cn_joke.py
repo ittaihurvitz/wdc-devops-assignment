@@ -1,6 +1,7 @@
 import os
 import sys
 import requests
+import json
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
 
@@ -22,9 +23,14 @@ class ChuckNorris(Base):
         pass
 
     def run(self):
+        print("Start debugging")
+        print(self.args.url)
         response = requests.get(self.args.url)
+        print(response)
         if response.status_code == 200:
+            print("response 200")
             data = response.json()
+            print(data)
             joke = data.get("value", "No joke found.")
             print(joke)
         else:
