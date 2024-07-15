@@ -36,7 +36,10 @@ jobs:
         uses: ./.github/actions/read_cn_joke
         with:
           url: "https://api.chucknorris.io/jokes/random"
-          
+
+      - run: 
+         echo "The joke is - ${{ steps.read_cn_joke.outputs.cn_joke }}"
+
       - name: Return Pod Name
         id: get_pod_name
         uses: ./.github/actions/pod_exposer
