@@ -25,8 +25,7 @@ class PodExposer(Base):
         if pod_name is not None:
             print(pod_name)
         else:
-            # raise Exception("Failed to get the runner pod's name.")
-            print("testing")
+            raise Exception("Failed to get the runner pod's name.")
 
     def on_exception(self, e):
         raise Exception from e
