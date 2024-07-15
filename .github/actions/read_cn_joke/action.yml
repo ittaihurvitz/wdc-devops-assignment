@@ -18,4 +18,5 @@ runs:
       shell: bash
       working-directory: ${{ github.action_path }}
       run: |
-        python read_cn_joke.py
+        script_output=$(python "${{ github.action_path }}/read_cn_joke.py" --url ${{ inputs.url }})
+        echo "cn_joke=$script_output" >> $GITHUB_OUTPUT
