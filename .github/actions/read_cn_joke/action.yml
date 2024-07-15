@@ -8,7 +8,7 @@ inputs:
 outputs:
   cn_joke:
     description: Chuck Norris Joke
-    value: ${{ steps.cn_joke.outputs.cn_joke }}
+    value: ${{ steps.cn_joke.outputs.cn_joke2 }}
 
 runs:
   using: 'composite'
@@ -26,3 +26,5 @@ runs:
             cn_joke=$script_output
             echo "$delimiter"
         } >> "$GITHUB_OUTPUT"
+
+        echo "cn_joke2=testing" >> "$GITHUB_OUTPUT"

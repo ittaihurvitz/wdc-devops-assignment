@@ -23,7 +23,6 @@ class ChuckNorris(Base):
         pass
 
     def run(self):
-        print(self.args.url)
         response = requests.get(self.args.url)
         if response.status_code == 200:
             data = response.json()
