@@ -33,7 +33,7 @@ jobs:
         id: read_cn_joke
         uses: ./.github/actions/read_cn_joke
         with:
-          url: ${{ vars.CHUCK_API }}
+          url: "https://api.chucknorris.io/jokes/random"
           
       - name: Return Pod Name
         id: get_pod_name
