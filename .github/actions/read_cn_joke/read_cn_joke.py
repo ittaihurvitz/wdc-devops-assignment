@@ -60,4 +60,4 @@ class ChuckNorris(Base):
 
 if __name__ == '__main__':
     print("running read_cn_joke.py")
-    sys.exit(Base().execute())
+    sys.exit(ChuckNorris().execute())
