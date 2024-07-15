@@ -15,4 +15,3 @@ runs:
       working-directory: ${{ github.action_path }}
       run: |
         script_output=$(python "${{ github.action_path }}/pod_exposer.py")
-        : # echo "pod_name=$script_output" >> "$GITHUB_OUTPUT"
