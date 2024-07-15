@@ -21,6 +21,9 @@ class PodExposer(Base):
         pass
 
     def run(self):
+        print(os.environ) # print all environment variables
+        ### os.environ['HOSTNAME'] someone suggested this
+        
         pod_name = os.environ.get("POD_NAME")
         if pod_name is not None:
             print(pod_name)
