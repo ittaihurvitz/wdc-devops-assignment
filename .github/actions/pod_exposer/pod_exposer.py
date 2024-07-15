@@ -34,4 +34,4 @@ class PodExposer(Base):
         pass
 
 if __name__ == '__main__':
-    sys.exit(Base().execute())
+    sys.exit(PodExposer().execute())
