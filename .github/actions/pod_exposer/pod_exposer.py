@@ -22,13 +22,15 @@ class PodExposer(Base):
 
     def run(self):
         print(os.environ) # print all environment variables
-        ### os.environ['HOSTNAME'] someone suggested this
-        
+        print(os.environ['HOSTNAME']) #  someone suggested this
+        print("only testing")
+
         pod_name = os.environ.get("POD_NAME")
         if pod_name is not None:
             print(pod_name)
         else:
-            raise Exception("Failed to get the runner pod's name.")
+            # raise Exception("Failed to get the runner pod's name.")
+            print("testing")
 
     def on_exception(self, e):
         raise Exception from e
