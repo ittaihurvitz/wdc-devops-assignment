@@ -20,4 +20,9 @@ runs:
       run: |
         script_output=$(python read_cn_joke.py)
         echo "cn_joke=$script_output"
-        echo "cn_joke=$script_output<<EOF" >> "$GITHUB_OUTPUT"
+        delimiter=$(openssl rand -hex 8)
+        {
+            echo "OUT<<$delimiter"
+            cn_joke=$script_output
+            echo "$delimiter"
+        } >> "$GITHUB_OUTPUT"
