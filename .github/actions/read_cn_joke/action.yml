@@ -18,7 +18,7 @@ runs:
       shell: bash
       working-directory: ${{ github.action_path }}
       run: |
-        read_cn_joke.py
+        python read_cn_joke.py
 
     - name: debug simple python
       id: cn_debug
